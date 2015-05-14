@@ -15,5 +15,7 @@
     <br/>
     <input type="submit" value="Login"/>
   </form>
+  <br/>
+  <a href="<?php echo site_url('apply'); ?>">Apply</a>
 </body>
 </html>
