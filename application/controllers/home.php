@@ -18,11 +18,29 @@ class Home extends CI_Controller {
 		}
 	}
 
+	//logout function.
 	function logout() {
 		$this->session->unset_userdata('logged_in');
 		session_destroy();
 		redirect('home','refresh');
 	}
+
+	//change password.
+	function changepw() {
+		if($this->session->userdata('logged_in')) {
+			$session_data = $this->session->userdata('logged_in');
+			$data['username'] = $session_data['username'];
+			$this->load->view('changepw_view',$data);
+		} else {
+			//no session.
+			redirect('login','refresh');
+		}
+	}
+
+	//check application status.
+	function status() {}
+
+	//
 
 }
 

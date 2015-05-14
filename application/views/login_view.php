@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simple Login with CodeIgniter</title>
+  <title>AOT Admission | Login</title>
 </head>
 <body>
   <h1>AOT Admission | Login</h1>
