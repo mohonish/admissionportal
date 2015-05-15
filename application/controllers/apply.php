@@ -21,7 +21,7 @@ class Apply extends CI_Controller {
 		$this->form_validation->set_rules('fname', 'First Name', 'trim|required|xss_clean');
 		$this->form_validation->set_rules('lname', 'Last Name', 'trim|required|xss_clean');
 		$this->form_validation->set_rules('gname', 'Guardian Name', 'trim|required|xss_clean');
-		$this->form_validation->set_rules('dob', 'Date of Birth', 'trim|required|xss_clean');
+		//$this->form_validation->set_rules('dob', 'Date of Birth', 'trim|required');
 		$this->form_validation->set_rules('stream', 'Stream', 'trim|required|xss_clean');
 
 		if($this->form_validation->run() == FALSE) {
@@ -36,7 +36,6 @@ class Apply extends CI_Controller {
 				$this->input->post('fname'),
 				$this->input->post('lname'),
 				$this->input->post('gname'),
-				$this->input->post('dob'),
 				$this->input->post('stream')
 			);
 			if($result) {

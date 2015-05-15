@@ -2,6 +2,9 @@
 <html>
 <head>
   <title>AOT Admission | Apply</title>
+  <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.css"); ?>" />
+  <script type="text/javascript" src="<?php echo base_url("assets/js/jquery-1.11.3.js"); ?>"></script>
+  <script type="text/javascript" src="<?php echo base_url("assets/js/bootstrap.js"); ?>"></script>
 </head>
 <body>
   <h1>AOT Admission | Apply</h1>
@@ -14,10 +17,10 @@
     <input type="text" size="20" id="username" name="username" value="<?php echo set_value('username'); ?>" />
     <br/>
     <label for="password">Password:</label>
-    <input type="password" size="20" id="password" name="password" value="<?php echo set_value('password'); ?>" />
+    <input type="password" size="20" id="password" name="password" />
     <br/>
     <label for="password">Re-enter Password:</label>
-    <input type="password" size="20" id="repassword" name="repassword" value="<?php echo set_value('repassword'); ?>" />
+    <input type="password" size="20" id="repassword" name="repassword" />
     <br/>
     <label for="fname">First Name:</label>
     <input type="text" size="20" id="fname" name="fname" value="<?php echo set_value('fname'); ?>" />
@@ -27,9 +30,6 @@
     <br/>
     <label for="gname">Guardian's Name:</label>
     <input type="text" size="20" id="gname" name="gname" value="<?php echo set_value('gname'); ?>" />
-    <br/>
-    <label for="dob">Date of Birth:</label>
-    <input type="text" size="10" id="dob" name="dob" value="<?php echo set_value('dob'); ?>" />
     <br/>
     <label for="stream">Select Stream:</label>
     <select name="stream">

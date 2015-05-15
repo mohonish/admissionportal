@@ -2,6 +2,9 @@
 <html>
 <head>
 	<title>AOT Admission | Admin</title>
+	<link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.css"); ?>" />
+	<script type="text/javascript" src="<?php echo base_url("assets/js/jquery-1.11.3.js"); ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url("assets/js/bootstrap.js"); ?>"></script>
 </head>
 <body>
    	<h1>Home</h1>

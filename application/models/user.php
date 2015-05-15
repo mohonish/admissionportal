@@ -22,7 +22,7 @@ class User extends CI_Model {
 		}
 	}
 
-	function apply($email, $username, $password, $fname, $lname, $gname, $dob, $stream) {
+	function apply($email, $username, $password, $fname, $lname, $gname, $stream) {
 		//add student info to users table and students table.
 		$data = array(
 			'username' => $username,
@@ -36,7 +36,6 @@ class User extends CI_Model {
 
 		$query = $this->db->get('users');
 		$uid = $query->result();
-		var_dump($uid);
 		
 		$data = array(
 			'uid' => $uid[0]->id,
@@ -44,8 +43,9 @@ class User extends CI_Model {
 			'fname' => $fname,
 			'lname' => $lname,
 			'gname' => $gname,
-			'dob' => date('d-m-y', strtotime($dob)),
-			'stream' => $stream
+			//'dob' => date('YYYY-MM-DD', strtotime($dob)),
+			'stream' => $stream,
+			'verified' => FALSE
 			);
 		if($this->db->insert('students',$data)) {
 			return TRUE;
