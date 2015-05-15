@@ -1,6 +1,11 @@
 <?php
 
 class User extends CI_Model {
+
+	function __construct() {
+        parent::__construct();
+    }
+
 	function login($username, $password) {
 		$this->db->select('id, username, password');
 		$this->db->from('users');
@@ -15,6 +20,14 @@ class User extends CI_Model {
 		} else {
 			return false;
 		}
+	}
+
+	function apply() {
+		//add student info to db.
+	}
+
+	function getstatus() {
+		return "Admitted man!";
 	}
 }
 

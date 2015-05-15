@@ -3,6 +3,7 @@
 class Apply extends CI_Controller {
 	function __construct() {
 		parent::__construct();
+		$this->load->model('User');
 	}
 	function index() {
 		$this->load->helper(array('form'));

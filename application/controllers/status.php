@@ -1,17 +1,17 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-session_start();
-
-class Home extends CI_Controller {
+class Status extends CI_Controller {
 	function __construct() {
 		parent::__construct();
+		$this->load->model('user','',TRUE);
 	}
 
 	function index() {
 		if($this->session->userdata('logged_in')) {
 			$session_data = $this->session->userdata('logged_in');
 			$data['username'] = $session_data['username'];
-			$this->load->view('home_view',$data);
+			$data['result'] = $this->user->getstatus($data['username']);
+			$this->load->view('status_view',$data);
 		} else {
 			//no session.
 			redirect('login','refresh');
@@ -22,7 +22,7 @@ class Home extends CI_Controller {
 	function logout() {
 		$this->session->unset_userdata('logged_in');
 		session_destroy();
-		redirect('login','refresh');
+		redirect('home','refresh');
 	}
 
 	//change password.
@@ -38,11 +38,7 @@ class Home extends CI_Controller {
 	}
 
 	//check application status.
-	function status() {
-		redirect('status');
-	}
-
-	//
+	function status() {}
 
 }
 

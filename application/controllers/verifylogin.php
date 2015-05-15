@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class VerifyLogin extends CI_Controller {
+class Verifylogin extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
@@ -17,7 +17,11 @@ class VerifyLogin extends CI_Controller {
 			$this->load->view('login_view');
 		} else {
 			//go to private dashboard.
+			if($this->input->post('username') == 'admin') {
+				redirect('admin/home', 'refresh');
+			} else {
 			redirect('home', 'refresh');
+			}
 		}
 	}
 
