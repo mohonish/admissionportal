@@ -37,6 +37,11 @@ class Home extends CI_Controller {
 		}
 	}
 
+	function applications() {
+		//get applications. show in application_view.
+		$this->load->view('admin/applications_view');
+	}
+
 }
 
 ?>

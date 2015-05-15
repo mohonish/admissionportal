@@ -13,9 +13,21 @@ DB Init Code
 1. Create Table.
 
 CREATE TABLE `users` (
- `id` tinyint(4) NOT NULL AUTO_INCREMENT,
+ `id` mediumint(4) NOT NULL AUTO_INCREMENT,
  `username` varchar(10) NOT NULL,
  `password` varchar(100) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+CREATE TABLE `students` (
+ `id` mediumint(4) NOT NULL AUTO_INCREMENT,
+ `uid` mediumint(4) NOT NULL,
+ `email` varchar(60) NOT NULL,
+ `fname` varchar(30) NOT NULL,
+ `lname` varchar(30) NOT NULL,
+ `gname` varchar(60),
+ `dob` Date NOT NULL,
+ `stream` varchar(3) NOT NULL,
  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 

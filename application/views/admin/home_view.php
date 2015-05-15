@@ -10,6 +10,7 @@
    	<a href="home/logout">Logout</a>
    	<a href="home/changepw">Change Password</a>
 	<!-- Next Feature TBD -->
+	<a href="home/applications">View Applications</a>
    	
 </body>
 </html>
