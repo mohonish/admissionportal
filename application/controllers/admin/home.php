@@ -5,6 +5,7 @@ session_start();
 class Home extends CI_Controller {
 	function __construct() {
 		parent::__construct();
+		$this->load->model('Admin');
 	}
 
 	function index() {
@@ -39,7 +40,20 @@ class Home extends CI_Controller {
 
 	function applications() {
 		//get applications. show in application_view.
-		$this->load->view('admin/applications_view');
+		$data['applications'] = $this->Admin->viewapplications();
+
+		$session_data = $this->session->userdata('logged_in');
+		$data['username'] = $session_data['username'];
+
+		$this->load->view('admin/applications_view',$data);
+	}
+
+	function verifyapplication($id) {
+		if($this->Admin->setverified($id)) {
+			redirect(base_url("index.php/admin/home/applications"),'refresh');
+		} else {
+			print "ERROR!";
+		}
 	}
 
 }

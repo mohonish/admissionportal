@@ -5,16 +5,6 @@
 	<link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.css"); ?>" />
   <link rel="stylesheet" href="<?php echo base_url("assets/css/sb-admin.css"); ?>" />
 </head>
-<!--
-<body>
-   	<h1>Home</h1>
-   	<h2>Welcome <?php echo $username; ?>!</h2>
-   	<a href="home/logout">Logout</a>
-   	<a href="home/changepw">Change Password</a>
-   	<a href="home/status">Application Status</a>
-   	<a href="home/edit">Edit Profile</a>
-</body>
--->
 <body>
 
     <div id="wrapper">
@@ -37,7 +27,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>Hi, <?php echo $username; ?><b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="home/edit"><i class="fa fa-fw fa-user"></i> Profile</a>
+                            <a href="<?php echo base_url("index.php/home/changepw"); ?>"><i class="fa fa-fw fa-user"></i> Change Password</a>
                         </li>
                         <li class="divider"></li>
                         <li>
@@ -53,16 +43,13 @@
                         <a href="<?php echo base_url("/index.php/home"); ?>"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="home/edit"><i class="fa fa-fw fa-bar-chart-o"></i> Edit Profile</a>
+                        <a href="<?php echo base_url("index.php/home/status"); ?>"><i class="fa fa-fw fa-table"></i> Application Status</a>
                     </li>
                     <li>
-                        <a href="home/status"><i class="fa fa-fw fa-table"></i> Application Status</a>
+                        <a href="#"><i class="fa fa-fw fa-table"></i> Tuition Fees</a>
                     </li>
                     <li>
-                        <a href="home/status"><i class="fa fa-fw fa-table"></i> Tuition Fees</a>
-                    </li>
-                    <li>
-                        <a href="home/status"><i class="fa fa-fw fa-table"></i> Help</a>
+                        <a href="#"><i class="fa fa-fw fa-table"></i> Help</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url("/#contact"); ?>"><i class="fa fa-fw fa-table"></i> Contact Us</a>
@@ -83,6 +70,12 @@
                             Dashboard
                             <small>Admissions</small>
                         </h1>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel nibh sapien. Donec facilisis aliquam sodales. Aliquam nec ultrices mauris, et pretium elit. Nunc vehicula tellus non commodo gravida. Quisque vel placerat ex, et pulvinar ante. Cras risus nunc, consequat nec mauris in, euismod pretium velit. Quisque sit amet bibendum turpis, non luctus dui.
+                        </p>
+                        <p>
+                        Pellentesque a ex id lorem porta auctor. Phasellus efficitur tempor convallis. Pellentesque eget nulla sed risus pellentesque tempor. In hac habitasse platea dictumst. Nam sit amet tortor mi. Integer dapibus hendrerit blandit. Nunc fringilla enim sapien, vitae rutrum odio bibendum a. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        </p>
                     </div>
                 </div>
                 <!-- /.row -->

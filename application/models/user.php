@@ -56,7 +56,7 @@ class User extends CI_Model {
 	}
 
 	function getstatus() {
-		return "Admitted man!";
+		return "Accepted!";
 	}
 }
 
