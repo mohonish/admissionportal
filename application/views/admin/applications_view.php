@@ -31,7 +31,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="home/logout"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            <a href="<?php echo base_url("index.php/admin/home/logout"); ?>"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
                 </li>
@@ -84,10 +84,14 @@
                         			<td><?php echo $item['stream']; ?></td>
                         			<td>
                         				<?php
+                                            if($item['verified'] == '0'){ echo "Unverified";}
+                                            if($item['verified'] == '1'){ echo "Accepted";}
+                                            if($item['verified'] == '2'){ echo "Rejected";}
+
                         					$url = base_url("/index.php/admin/home/verifyapplication") . "/" . $item['id'];
-                        					echo "<a href='" . $url . "'>";
-											if($item['verified'] == 0){ echo "Unverified";} else { echo "Verified"; }
-											echo "</a>";
+                        					echo " <a href='" . $url . "'>Accept</a>";
+                                            $url = base_url("/index.php/admin/home/rejectapplication") . "/" . $item['id'];
+                                            echo " <a href='" . $url . "'>Reject</a>";
 										?>
                         			</td>
                         		</tr>

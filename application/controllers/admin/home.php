@@ -56,6 +56,14 @@ class Home extends CI_Controller {
 		}
 	}
 
+	function rejectapplication($id) {
+		if($this->Admin->setrejected($id)) {
+			redirect(base_url("index.php/admin/home/applications"),'refresh');
+		} else {
+			print "ERROR!";
+		}
+	}
+
 }
 
 ?>

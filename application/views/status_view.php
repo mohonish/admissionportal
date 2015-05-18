@@ -70,7 +70,13 @@
                             Application
                             <small>Status</small>
                         </h1>
-                        <h2>Your Status: <?php echo $result; ?></h2>
+                        <h2>Your Status:
+                            <?php 
+                            if($result == '0'){ echo "Under Review."; }
+                            if($result == '1'){ echo "Accepted!"; }
+                            if($result == '2'){ echo "Rejected."; }
+                            ?>
+                        </h2>
                     </div>
                 </div>
                 <!-- /.row -->

@@ -24,6 +24,13 @@ class Admin extends CI_Model {
     	return TRUE;
     }
 
+    function setrejected($id) {
+        $data = array('verified' => '2');
+        $this->db->where('id',$id);
+        $this->db->update('students',$data);
+        return TRUE;
+    }
+
     function setapplication() {} //sets verified marker. or for saving edits.
 
 }

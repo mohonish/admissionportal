@@ -27,7 +27,7 @@ CREATE TABLE `students` (
  `lname` varchar(30) NOT NULL,
  `gname` varchar(60),
  `stream` varchar(3) NOT NULL,
- `verified` boolean NOT NULL,
+ `verified` tinyint(1) NOT NULL,
  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 

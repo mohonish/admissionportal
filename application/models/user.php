@@ -45,7 +45,7 @@ class User extends CI_Model {
 			'gname' => $gname,
 			//'dob' => date('YYYY-MM-DD', strtotime($dob)),
 			'stream' => $stream,
-			'verified' => FALSE
+			'verified' => '0'
 			);
 		if($this->db->insert('students',$data)) {
 			return TRUE;
@@ -55,8 +55,24 @@ class User extends CI_Model {
 
 	}
 
-	function getstatus() {
-		return "Accepted!";
+	function getstatus($username) {
+		$this->db->select('id');
+		$this->db->where('username', $username);
+		$this->db->limit(1);
+
+		$query = $this->db->get('users');
+		$uid = $query->result();
+
+		//var_dump($uid);
+
+		$this->db->select('verified');
+		$this->db->where('uid',$uid[0]->id);
+		$query2 = $this->db->get('students');
+		$status = $query2->result();
+
+		//var_dump($status[0]);
+
+		return $status[0]->verified;
 	}
 }
 

@@ -32,7 +32,7 @@
                     <a href="<?php echo base_url('/#programmes'); ?>">Programmes</a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url('/#placements'); ?>">Placements</a>
+                    <a href="<?php echo base_url('/#departments'); ?>">Departments</a>
                 </li>
                 <li>
                     <a href="<?php echo base_url('/#campus-life'); ?>">Campus Life</a>

@@ -38,7 +38,17 @@ class Status extends CI_Controller {
 	}
 
 	//check application status.
-	function status() {}
+	function status() {
+		if($this->session->userdata('logged_in')) {
+			$session_data = $this->session->userdata('logged_in');
+			$username = $session_data['username'];
+			$result = $this->user->getstatus($username);
+			
+		} else {
+			//no session.
+			redirect('login','refresh');
+		}
+	}
 
 }
 
